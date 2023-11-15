@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>:: HOLIDAY MASTER ::</title>
+	<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" th:href="@{/studentList}">Hello User</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item text-right">
+						<a class="nav-link active" aria-current="page" th:href="@{/logout}">Logout</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<br /><br />
+
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="card">
+						<div class="card-header">
+							<h6 class="text-center"> HOLIDAY MASTER</h6>
+						</div>
+						<div class="card-body">
+							<div class="row">
+								<div class="col-md-5">
+									<div class="form-check">
+										<input type="radio" class="form-check-input" id="radio1" name="radio"
+											value="option1"> One day
+										<label class="form-check-label" for="radio1"></label>
+									</div>
+								</div>
+								<div class="col-md-7">
+									<div class="form-check">
+										<input type="radio" class="form-check-input" id="radio2" name="radio"
+											value="option2"> More than one day
+										<label class="form-check-label" for="radio2"></label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-floating mb-3" style="display: none;">
+								<input type="date" id="password" name="password" class="form-control" autocomplete="off"
+									autofocus="autofocus" />
+								<label> Date</label>
+							</div>
+						</div>
+						
+						<div class="card-footer">
+							<div class="form-group mb-3 text-center">
+								<button type="submit" class="btn btn-primary">Submit</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="card">
+						<div class="card-header">
+							<h6 class="text-center"> HOLIDAY MASTER</h4>
+						</div>
+						<div class="card-body">
+							<table class="table table-bordered table-striped">
+								<thead class="table-success">
+									<tr>
+										<th>Id</th>
+										<th>Holiday Date(DD-MM-YYYY)</th>
+										<th>Edit</th>
+										<th>Delete</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr th:each = "holiday, status : ${holidayData}">
+										<!--<td th:text = "${holiday.id}"></td>-->
+										<td th:text = "${status.count}"></td>
+										<td th:text = "${holiday.holidayDate}"></td>
+										<!--<td th:text = "${#dates.format(holiday.holidayDate, 'dd-MMM-yyyy')}"></td>-->
+										<td>Doe</td>
+										<td>Doe</td>
+									</tr>									
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

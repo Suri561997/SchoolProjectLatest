@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>:: SECTION MASTER ::</title>
+	<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" th:href="@{/studentList}">Hello User</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item text-right">
+						<a class="nav-link active" aria-current="page" th:href="@{/logout}">Logout</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<br /><br />
+
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="card">
+						<div class="card-header">
+							<h6 class="text-center"> SECTION MASTER</h6>
+						</div>
+						<div class="card-body">
+							<div class="row">
+								<div class="col-md-5 mt-2">
+									<label class="control-label"> Class Name</label>
+								</div>
+								<div class="col-md-7">
+									<select class="form-control" autofocus="autofocus">
+										<option selected>Choose..</option>
+										<option value="1">CLASS I</option>
+										<option value="2">CLASS II</option>
+										<option value="3">CLASS III</option>
+										<option value="4">CLASS IV</option>
+										<option value="5">CLASS V</option>
+										<option value="6">CLASS VI</option>
+										<option value="7">CLASS VII</option>
+										<option value="8">CLASS VIII</option>
+										<option value="9">CLASS IX</option>
+										<option value="10">CLASS X</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="row mt-2">
+								<div class="col-md-5 mt-2">
+									<label class="control-label"> Section Name</label>
+								</div>
+								<div class="col-md-7">
+									<input type="text" id="" name="" class="form-control" placeholder="Enter Section Name"
+										autocomplete="off" maxlength="1" pattern="[A-Za-z]{1}"/>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer">
+							<div class="form-group mb-3 text-center">
+								<button type="submit" class="btn btn-primary">Submit</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="card">
+						<div class="card-header">
+							<h6 class="text-center"> HOLIDAY MASTER</h4>
+						</div>
+						<div class="card-body">
+							<table class="table table-bordered table-striped">
+								<thead class="table-success">
+									<tr>
+										<th>Firstname</th>
+										<th>Lastname</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>John</td>
+										<td>Doe</td>
+									</tr>
+									<tr>
+										<td>John</td>
+										<td>Doe</td>
+									</tr>
+									<tr>
+										<td>John</td>
+										<td>Doe</td>
+									</tr>
+									<tr>
+										<td>John</td>
+										<td>Doe</td>
+									</tr>
+									<tr>
+										<td>John</td>
+										<td>Doe</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>
